@@ -259,3 +259,4 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/_cheat sheet/S3 L32_Entity-Framework-Cheat-Sheet.pdf
