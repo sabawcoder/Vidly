@@ -165,13 +165,30 @@
     </Compile>
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
-    <Compile Include="Migrations\201904100649098_InitialModel.cs" />
-    <Compile Include="Migrations\201904100649098_InitialModel.Designer.cs">
-      <DependentUpon>201904100649098_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\201904140412583_InitialModel.cs" />
+    <Compile Include="Migrations\201904140412583_InitialModel.Designer.cs">
+      <DependentUpon>201904140412583_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904140423483_AddIsSubscribedToCustomer.cs" />
+    <Compile Include="Migrations\201904140423483_AddIsSubscribedToCustomer.Designer.cs">
+      <DependentUpon>201904140423483_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904140426385_AddMembershipType.cs" />
+    <Compile Include="Migrations\201904140426385_AddMembershipType.Designer.cs">
+      <DependentUpon>201904140426385_AddMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904140427587_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\201904140427587_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>201904140427587_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904140432301_ApplyAnnotationsToCustomerName.cs" />
+    <Compile Include="Migrations\201904140432301_ApplyAnnotationsToCustomerName.Designer.cs">
+      <DependentUpon>201904140432301_ApplyAnnotationsToCustomerName.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -234,8 +251,20 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904100649098_InitialModel.resx">
-      <DependentUpon>201904100649098_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904140412583_InitialModel.resx">
+      <DependentUpon>201904140412583_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904140423483_AddIsSubscribedToCustomer.resx">
+      <DependentUpon>201904140423483_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904140426385_AddMembershipType.resx">
+      <DependentUpon>201904140426385_AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904140427587_PopulateMembershipTypes.resx">
+      <DependentUpon>201904140427587_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904140432301_ApplyAnnotationsToCustomerName.resx">
+      <DependentUpon>201904140432301_ApplyAnnotationsToCustomerName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
