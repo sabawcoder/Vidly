@@ -28,7 +28,7 @@ namespace Vidly.Models
 
         public ActionResult Details(int id)
         {
-            var customer = context.Customers.SingleOrDefault(c => c.Id == id);
+            var customer = context.Customers.Include(c => c.MembershipType).ToList().SingleOrDefault(c => c.Id == id);
             return View(customer);
         }
     }
