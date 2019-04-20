@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
 using System.Data.Entity;
+using Vidly.ViewModels;
 
 namespace Vidly.Models
 {
@@ -12,15 +13,25 @@ namespace Vidly.Models
             context = new ApplicationDbContext();
         }
 
+        protected override void Dispose(bool disposing)
+        {
+            context.Dispose();
+        }
+
+        public ActionResult New()
+        {
+            var membershipTypes = context.MembershipTypes.ToList();
+            var viewModel = new NewCustomerViewModel
+            {
+                MembershipTypes = membershipTypes
+            };
+            return View(viewModel);
+        }
+
         public ViewResult Index()
         {
             var customers = context.Customers.Include(c => c.MembershipType).ToList();
             return View(customers);
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            context.Dispose();
         }
 
         public ActionResult Details(int id)
