@@ -28,6 +28,15 @@ namespace Vidly.Models
             return View(viewModel);
         }
 
+        [HttpPost]
+        public ActionResult Create(Customer customer)
+        {
+            context.Customers.Add(customer);
+            context.SaveChanges();
+
+            return RedirectToAction("Index", "Customers");
+        }
+
         public ViewResult Index()
         {
             var customers = context.Customers.Include(c => c.MembershipType).ToList();
